@@ -1,8 +1,14 @@
+import { Outlet } from "react-router-dom";
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
+
 function App() {
 	return (
-		<main>
-			<h1 className="text-2xl text-center my-8">Моё портфолио</h1>
-		</main>
+		<div className="min-h-screen flex flex-col justify-between ">
+			<Header />
+			<Outlet />
+			<Footer />
+		</div>
 	);
 }
 
