@@ -3,5 +3,23 @@
 @tailwind utilities;
 
 body {
+	background: rgb(206, 240, 252);
+	background: linear-gradient(
+		180deg,
+		rgba(206, 240, 252, 0.8) 0%,
+		rgba(206, 240, 252, 0.9) 10%,
+		rgba(197, 236, 251, 0.4) 20%,
+		rgba(206, 240, 252, 0.3) 50%,
+		rgba(134, 209, 249, 0.5) 70%,
+		rgba(118, 201, 245, 0.7) 80%,
+		rgba(35, 84, 139, 1) 100%
+	);
 	font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+.active {
+	color: #1100a7;
+	transition: all 0.5s;
+}
+.active > span {
+	width: 90%;
 }

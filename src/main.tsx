@@ -3,7 +3,9 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.tsx";
 import AboutMe from "./components/body/AboutMe.tsx";
+import Contacts from "./components/body/Contacts.tsx";
 import Home from "./components/body/Home.tsx";
+import Portfolio from "./components/body/Portfolio.tsx";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -18,6 +20,14 @@ const router = createBrowserRouter([
 			{
 				path: "aboutMe",
 				element: <AboutMe />,
+			},
+			{
+				path: "portfolio",
+				element: <Portfolio />,
+			},
+			{
+				path: "contacts",
+				element: <Contacts />,
 			},
 		],
 	},
