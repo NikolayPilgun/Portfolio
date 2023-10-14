@@ -20,6 +20,6 @@ body {
 	color: #1100a7;
 	transition: all 0.5s;
 }
-.active > span {
+.active > span > span {
 	width: 90%;
 }

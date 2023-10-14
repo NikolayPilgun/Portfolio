@@ -17,13 +17,15 @@ export default function NavBar() {
 	return (
 		<nav className="relative">
 			{/* Desktop Navigation */}
-			<ul className="hidden sm:flex justify-end items-center gap-2">
+			<ul className="hidden sm:flex justify-end items-center gap-5">
 				{navBarData.map((link) => (
 					<li key={link.name}>
-						<NavLink className="p-3 relative group" to={link.path}>
+						<NavLink className="relative group text-base py-4" to={link.path}>
 							{link.name}
-							<span className="absolute left-[5%] bottom-2 inline-block w-0  h-[2px] transition-[width] ease-linear duration-300 group-hover:w-[90%]  bg-slate-900 ">
-								&nbsp;
+							<span className="absolute left-0 bottom-0 h-[2px] w-full inline-block py-3 text-center">
+								<span className="inline-block w-0 h-[2px] transition-[width] ease-linear duration-300 group-hover:w-[90%]  bg-slate-900 ">
+									&nbsp;
+								</span>
 							</span>
 						</NavLink>
 					</li>
@@ -54,12 +56,12 @@ export default function NavBar() {
 			</div>
 
 			<motion.div
-				className="absolute top-9 sm:hidden"
+				className="absolute top-9 z-40 sm:hidden"
 				initial={false}
 				animate={isOpen ? "open" : "closed"}
 			>
 				<motion.ul
-					className="w-[150px] flex flex-col gap-5 h-auto px-6 py-4 bg-[#448EA3]"
+					className="w-[200px] flex flex-col justify-center items-center gap-6 h-auto py-6  bg-[#448EA3]"
 					variants={{
 						open: {
 							clipPath: "inset(0% 0% 0% 0% round 10px)",
@@ -88,10 +90,12 @@ export default function NavBar() {
 							variants={itemVariants}
 							className="cursor-pointer "
 						>
-							<NavLink className="relative  py-4 group" to={link.path}>
+							<NavLink className="relative text-base py-4 group" to={link.path}>
 								{link.name}
-								<span className="absolute  left-[5%] bottom-2 inline-block w-0  h-[2px] transition-[width] ease-linear duration-300 group-hover:w-[90%]  bg-slate-900 ">
-									&nbsp;
+								<span className="absolute left-0 bottom-0 h-[2px] w-full inline-block py-3 text-center">
+									<span className="inline-block w-0 h-[2px] transition-[width] ease-linear duration-300 group-hover:w-[90%]  bg-slate-900 ">
+										&nbsp;
+									</span>
 								</span>
 							</NavLink>
 						</motion.li>
