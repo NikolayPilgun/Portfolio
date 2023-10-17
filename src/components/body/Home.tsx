@@ -19,7 +19,7 @@ export default function Home() {
 								delay: 0.5,
 							}}
 						>
-							Привет, Я Николай Пильгун
+							Привет, я Николай Пильгун
 						</motion.h1>
 						<motion.h2
 							className="md:text-2xl text-xl mb-5"
