@@ -22,6 +22,7 @@ export default function Contacts() {
 					<img className="w-[100px] h-[100px]" src="contacts/vk.png" alt="vk" />
 				</div>
 				<div className="">
+					<h1>Test</h1>
 					<img src="contacts/contact1.png" alt="contact1" />
 				</div>
 			</div>
