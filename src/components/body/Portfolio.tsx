@@ -4,9 +4,15 @@ import { filterData, siteCardData } from "../../data/dataPortfolio";
 
 export default function Portfolio() {
 	const [count, setCount] = useState(0);
+	const [siteCard, setSiteCard] = useState(siteCardData);
+
 	function filterOnClick(index: number, name: string) {
 		setCount(index);
-		console.log(name);
+		if (name === "Все работы") {
+			setSiteCard(siteCardData);
+		} else {
+			setSiteCard(siteCardData.filter((item) => item.name === name));
+		}
 	}
 
 	return (
@@ -27,7 +33,7 @@ export default function Portfolio() {
 				</ul>
 			</div>
 			<div className="flex flex-wrap justify-around items-center gap-10 mx-5">
-				{siteCardData.map((item) => (
+				{siteCard.map((item) => (
 					<div
 						key={item.id}
 						className="relative w-[400px] h-[420px] max-[360px]:h-[300px]  overflow-hidden  bg-[#EBEFFE] shadow-lg shadow-blue-500/50 cursor-pointer group"

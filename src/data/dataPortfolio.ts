@@ -29,9 +29,6 @@ export const filterData: IFilter[] = [
 	{
 		name: "ReactJS",
 	},
-	{
-		name: "TypeScript",
-	},
 ];
 
 export interface ISiteCard {
