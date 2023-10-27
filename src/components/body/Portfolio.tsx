@@ -22,7 +22,7 @@ export default function Portfolio() {
 				<ul className="w-[80%] mx-auto flex flex-wrap justify-center items-center gap-6 py-5 text-[#E1F7FD] bg-[#4A5CA5] text-xl font-medium">
 					{filterData.map((item, index) => (
 						<li
-							key={item.name}
+							key={`${item.name}${index}`}
 							className="cursor-pointer hover:scale-110 transition-all duration-300"
 							style={{ color: count === index ? "#FFB061" : "#E1F7FD" }}
 							onClick={() => filterOnClick(index, item.name)}
@@ -40,13 +40,13 @@ export default function Portfolio() {
 					>
 						<img
 							className="absolute top-0 left-0 z-10"
-							src={item.firstPicture}
-							alt={item.siteType}
+							src={item.pictures[0]}
+							alt={`${item.siteType}${item.id}`}
 						/>
 						<img
 							className="absolute bottom-0 left-0"
-							src={item.secondPicture}
-							alt={item.siteType}
+							src={item.pictures[1]}
+							alt={`${item.siteType}${item.id}`}
 						/>
 						<div className="flex flex-col justify-around items-center gap-4 p-3 w-full h-full absolute right-full group-hover:right-0 transition-all ease-linear duration-300 top-0 z-20 bg-opacity-60 bg-slate-300">
 							<h2 className="text-2xl font-medium text-center">

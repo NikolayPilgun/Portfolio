@@ -1,0 +1,45 @@
+.container {
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+.carousel {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.itemsList {
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.item {
+	flex: 1 0 100%;
+}
+
+.leftArrow {
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	top: calc(50% - 20px);
+	left: -60px;
+	cursor: pointer;
+	transform: rotate(180deg);
+}
+.rightArrow {
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	top: calc(50% - 20px);
+	right: -60px;
+	cursor: pointer;
+}
+
+.leftArrow:active {
+	transform: rotate(180deg) scale(0.8);
+}
+
+.rightArrow:active {
+	transform: scale(0.8);
+}
