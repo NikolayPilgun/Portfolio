@@ -4,19 +4,21 @@ import SliderCarousel from "../sliderCarousel/sliderCarousel";
 
 export default function PortfolioPage() {
 	const dataPage = useParams().pageId;
-	const dataPageArr = siteCardData.filter((item) => item.path === dataPage);
+	const dataPageArr = siteCardData.filter((item) => item.path === dataPage)[0];
 
 	return (
 		<div className="flex-grow mt-10 mb-20">
 			<div className="flex flex-col justify-center items-center">
-				<h1 className="text-3xl my-5">{dataPageArr[0].siteType}</h1>
+				<h1 className="text-3xl sm:my-5 my-10 mx-3 text-center">
+					{dataPageArr.siteType}
+				</h1>
 				<div className="w-[80%]  mx-auto ">
-					<SliderCarousel dataSlider={dataPageArr[0].pictures} />
+					<SliderCarousel dataSlider={dataPageArr.pictures} />
 				</div>
 				<div className="my-8 rounded-lg border-4 cursor-pointer border-black border-solid active:scale-90 transition-all ease-linear duration-300 group">
 					<a
 						className="flex items-center gap-3 px-4 py-2 "
-						href="https://github.com/NikolayPilgun/car-shop"
+						href={dataPageArr.github}
 					>
 						<span className="text-xl font-medium">GitHub</span>
 						<span className="h-[40px] w-[40px] relative">
@@ -36,39 +38,16 @@ export default function PortfolioPage() {
 
 				<div className="w-full mb-10">
 					<h2 className="text-2xl ml-[10%] mb-5">Краткое описание</h2>
-					<div className="flex flex-col justify-center items-center gap-6 ml-[12%] mr-[10%] sm:w-[630px] ">
-						<p className="w-full flex justify-between gap-10 border-b-4">
-							<span>Вид:</span>
-							<span>Лендинг</span>
-						</p>
-						<p className="w-full flex justify-between gap-10 border-b-4">
-							<span>Язык разработки: </span>
-							<span>JavaScript</span>
-						</p>
-						<p className="w-full flex justify-between gap-10 border-b-4">
-							<span>Фреймворк / библиотека: </span>
-							<span>ReactJS</span>
-						</p>
-						<p className="w-full flex justify-between gap-10 border-b-4">
-							<span>Язык стилей: </span>
-							<span>SCSS, module</span>
-						</p>
-						<p className="w-full flex justify-between gap-10 border-b-4">
-							<span>Доп. библиотеки: </span>
-							<span>Redux Toolkit, Axios</span>
-						</p>
-						<p className="w-full flex justify-between gap-10 border-b-4">
-							<span>TypeScript: </span>
-							<span>Да</span>
-						</p>
-						<p className="w-full flex justify-between gap-10 border-b-4">
-							<span>Адаптивный сайт: </span>
-							<span>Да</span>
-						</p>
-						<p className="w-full flex justify-between gap-10 border-b-4">
-							<span>Примечание: </span>
-							<span>Данный сайт разработан на основе YouTube курса</span>
-						</p>
+					<div className="flex flex-col justify-center items-center gap-6 ml-[12%] mr-[10%] sm:w-[530px] ">
+						{dataPageArr.siteTTX.map((item, index) => (
+							<p
+								key={index}
+								className="w-full flex justify-between gap-10 text-lg border-b-4 border-[#A68C42]"
+							>
+								<span>{item.title}:</span>
+								<span>{item.content}</span>
+							</p>
+						))}
 					</div>
 				</div>
 			</div>

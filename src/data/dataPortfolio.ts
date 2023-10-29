@@ -66,6 +66,10 @@ export const filterData: IFilter[] = [
 		name: "ReactJS",
 	},
 ];
+export interface ISiteTTX {
+	title: string;
+	content: string;
+}
 
 export interface ISiteCard {
 	id: number;
@@ -73,6 +77,8 @@ export interface ISiteCard {
 	siteType: string;
 	path: string;
 	pictures: string[];
+	github: string;
+	siteTTX: ISiteTTX[];
 }
 
 export const siteCardData: ISiteCard[] = [
@@ -82,6 +88,37 @@ export const siteCardData: ISiteCard[] = [
 		siteType: "Магазин по продаже автомобилей",
 		path: "carShop",
 		pictures: [carShop1, carShop2],
+		github: "https://github.com/NikolayPilgun/car-shop",
+		siteTTX: [
+			{
+				title: "Вид сайта",
+				content: "Сайт-визитка",
+			},
+			{
+				title: "Язык разработки",
+				content: "JavaScript",
+			},
+			{
+				title: "Фреймворк / библиотека",
+				content: "NextJS",
+			},
+			{
+				title: "Язык стилей",
+				content: "Tailwind CSS",
+			},
+			{
+				title: "TypeScript",
+				content: "Да",
+			},
+			{
+				title: "Адаптивный сайт",
+				content: "Да",
+			},
+			{
+				title: "Примечание",
+				content: "Для работы сайта необходимо использовать JSON Server",
+			},
+		],
 	},
 	{
 		id: 2,
@@ -94,6 +131,37 @@ export const siteCardData: ISiteCard[] = [
 			clothingStore3,
 			clothingStore4,
 			clothingStore5,
+		],
+		github: "https://github.com/NikolayPilgun/shop-one-page",
+		siteTTX: [
+			{
+				title: "Вид сайта",
+				content: "Корпоративный имиджевый web-сайт",
+			},
+			{
+				title: "Язык разработки",
+				content: "JavaScript",
+			},
+			{
+				title: "Фреймворк / библиотека",
+				content: "ReactJS",
+			},
+			{
+				title: "Язык стилей",
+				content: "CSS module",
+			},
+			{
+				title: "Доп. библиотеки",
+				content: "React Router DOM v6",
+			},
+			{
+				title: "TypeScript",
+				content: "Нет",
+			},
+			{
+				title: "Адаптивный сайт",
+				content: "Нет",
+			},
 		],
 	},
 	{
@@ -110,6 +178,41 @@ export const siteCardData: ISiteCard[] = [
 			popularBooks6,
 			popularBooks7,
 		],
+		github: "https://github.com/NikolayPilgun/next-13-project",
+		siteTTX: [
+			{
+				title: "Вид сайта",
+				content: "Информационный сайт / Блог",
+			},
+			{
+				title: "Язык разработки",
+				content: "JavaScript",
+			},
+			{
+				title: "Фреймворк / библиотека",
+				content: "NextJS",
+			},
+			{
+				title: "Язык стилей",
+				content: "Tailwind CSS",
+			},
+			{
+				title: "Доп. библиотеки",
+				content: "NextAuth.js, Zod, React Hook Form",
+			},
+			{
+				title: "TypeScript",
+				content: "Да",
+			},
+			{
+				title: "Адаптивный сайт",
+				content: "Да",
+			},
+			{
+				title: "Примечание",
+				content: "Для работы сайта необходимо использовать JSON Server",
+			},
+		],
 	},
 	{
 		id: 4,
@@ -125,6 +228,41 @@ export const siteCardData: ISiteCard[] = [
 			buildingHouse6,
 			buildingHouse7,
 		],
+		github: "https://github.com/NikolayPilgun/BuildingHouse",
+		siteTTX: [
+			{
+				title: "Вид сайта",
+				content: "Корпоративный имиджевый web-сайт",
+			},
+			{
+				title: "Язык разработки",
+				content: "JavaScript",
+			},
+			{
+				title: "Фреймворк / библиотека",
+				content: "ReactJS",
+			},
+			{
+				title: "Язык стилей",
+				content: "SCSS module",
+			},
+			{
+				title: "Доп. библиотеки",
+				content: "Swiper, Framer Motion, React Hook Form, React Router DOM v6",
+			},
+			{
+				title: "TypeScript",
+				content: "Да",
+			},
+			{
+				title: "Адаптивный сайт",
+				content: "Да",
+			},
+			{
+				title: "Примечание",
+				content: "Для работы сайта необходимо использовать JSON Server",
+			},
+		],
 	},
 	{
 		id: 5,
@@ -132,6 +270,41 @@ export const siteCardData: ISiteCard[] = [
 		siteType: "Интернет-магазин пиццерии",
 		path: "pizzeriaStore",
 		pictures: [pizzeriaStore1, pizzeriaStore2, pizzeriaStore3],
+		github: "https://github.com/NikolayPilgun/ReactPizza",
+		siteTTX: [
+			{
+				title: "Вид сайта",
+				content: "Интернет-магазин",
+			},
+			{
+				title: "Язык разработки",
+				content: "JavaScript",
+			},
+			{
+				title: "Фреймворк / библиотека",
+				content: "ReactJS",
+			},
+			{
+				title: "Язык стилей",
+				content: "SCSS module",
+			},
+			{
+				title: "Доп. библиотеки",
+				content: "Redux Toolkit, Axios, React Router DOM v6",
+			},
+			{
+				title: "TypeScript",
+				content: "Да",
+			},
+			{
+				title: "Адаптивный сайт",
+				content: "Нет",
+			},
+			{
+				title: "Примечание",
+				content: "Данный сайт разработан на основе YouTube курса",
+			},
+		],
 	},
 	{
 		id: 6,
@@ -139,6 +312,41 @@ export const siteCardData: ISiteCard[] = [
 		siteType: "Простой магазин косметики",
 		path: "cosmeticsStore",
 		pictures: [cosmeticsStore1, cosmeticsStore2, cosmeticsStore3],
+		github: "https://github.com/NikolayPilgun/ReactCosmetics",
+		siteTTX: [
+			{
+				title: "Вид сайта",
+				content: "Сайт-визитка",
+			},
+			{
+				title: "Язык разработки",
+				content: "JavaScript",
+			},
+			{
+				title: "Фреймворк / библиотека",
+				content: "ReactJS",
+			},
+			{
+				title: "Язык стилей",
+				content: "SCSS module",
+			},
+			{
+				title: "Доп. библиотеки",
+				content: "Swiper, Framer Motion, AutoAnimate",
+			},
+			{
+				title: "TypeScript",
+				content: "Да",
+			},
+			{
+				title: "Адаптивный сайт",
+				content: "Да",
+			},
+			{
+				title: "Примечание",
+				content: "Данный сайт создан на основе YouTube курса",
+			},
+		],
 	},
 	{
 		id: 7,
@@ -146,6 +354,41 @@ export const siteCardData: ISiteCard[] = [
 		siteType: "Фитнес-клуб",
 		path: "fitnessClub",
 		pictures: [fitnessClub1, fitnessClub2, fitnessClub3],
+		github: "https://github.com/NikolayPilgun/FitnessClub",
+		siteTTX: [
+			{
+				title: "Вид сайта",
+				content: "Сайт-визитка",
+			},
+			{
+				title: "Язык разработки",
+				content: "JavaScript",
+			},
+			{
+				title: "Фреймворк / библиотека",
+				content: "ReactJS",
+			},
+			{
+				title: "Язык стилей",
+				content: "CSS module",
+			},
+			{
+				title: "Доп. библиотеки",
+				content: "EmailJS, Framer Motion",
+			},
+			{
+				title: "TypeScript",
+				content: "Нет",
+			},
+			{
+				title: "Адаптивный сайт",
+				content: "Да",
+			},
+			{
+				title: "Примечание",
+				content: "Данный сайт создан на основе YouTube курса",
+			},
+		],
 	},
 	{
 		id: 8,
@@ -153,5 +396,40 @@ export const siteCardData: ISiteCard[] = [
 		siteType: "Интернет-магазин еды",
 		path: "foodStore",
 		pictures: [foodStore1, foodStore2, foodStore3, foodStore4],
+		github: "https://github.com/NikolayPilgun/ReactFood",
+		siteTTX: [
+			{
+				title: "Вид сайта",
+				content: "Интернет-магазин",
+			},
+			{
+				title: "Язык разработки",
+				content: "JavaScript",
+			},
+			{
+				title: "Фреймворк / библиотека",
+				content: "NextJS",
+			},
+			{
+				title: "Язык стилей",
+				content: "CSS module",
+			},
+			{
+				title: "Доп. библиотеки",
+				content: "Zustand, Sanity, Stripe",
+			},
+			{
+				title: "TypeScript",
+				content: "Нет",
+			},
+			{
+				title: "Адаптивный сайт",
+				content: "Нет",
+			},
+			{
+				title: "Примечание",
+				content: "Данный сайт создан на основе YouTube курса",
+			},
+		],
 	},
 ];
