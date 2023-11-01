@@ -17,13 +17,13 @@ export default function PortfolioPage() {
 				</div>
 				<div className="my-8 rounded-lg border-4 cursor-pointer border-black border-solid active:scale-90 transition-all ease-linear duration-300 group">
 					<a
-						className="flex items-center gap-3 px-4 py-2 "
+						className="flex items-center gap-3 px-4 py-2"
 						href={dataPageArr.github}
 					>
 						<span className="text-xl font-medium">GitHub</span>
 						<span className="h-[40px] w-[40px] relative">
 							<img
-								className="absolute top-0 left-0 opacity-100 group-hover:opacity-0 transition-all ease-linear duration-500 "
+								className="absolute top-0 left-0 opacity-100 group-hover:opacity-0 transition-all ease-linear duration-500"
 								src="logo/gitLogo1.png"
 								alt="gitLogo1"
 							/>
@@ -42,10 +42,10 @@ export default function PortfolioPage() {
 						{dataPageArr.siteTTX.map((item, index) => (
 							<p
 								key={index}
-								className="w-full flex justify-between gap-10 text-lg border-b-4 border-[#A68C42]"
+								className="w-full flex justify-between gap-5 text-lg border-b-4 border-[#A68C42]"
 							>
-								<span>{item.title}:</span>
-								<span>{item.content}</span>
+								<span className="text-left">{item.title}:</span>
+								<span className="text-right">{item.content}</span>
 							</p>
 						))}
 					</div>
