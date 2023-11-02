@@ -3,7 +3,7 @@ import { codingSkillsData, profSkillsData } from "../../data/dataAboutMe";
 export default function AboutMe() {
 	return (
 		<div className="flex-grow mt-10 mb-32">
-			<main className="flex flex-row justify-center items-center gap-5 mx-5">
+			<main className="flex md:flex-row flex-col justify-center items-center gap-5 mx-5">
 				<div className="">
 					<div className="max-w-lg">
 						<motion.h1
@@ -34,7 +34,7 @@ export default function AboutMe() {
 						</p>
 					</div>
 				</div>
-				<div className="">
+				<div className="md:order-1 -order-1">
 					<img
 						className="h-[600px]"
 						src="aboutMe/aboutMePhoto.png"
@@ -44,44 +44,58 @@ export default function AboutMe() {
 			</main>
 			<div className="my-10 mx-10 text-center">
 				<h2 className="text-5xl font-medium my-7">Мои навыки</h2>
-				<div className="flex justify-around items-start">
-					<section className="max-w-xl">
+				<div className="flex flex-wrap justify-around items-start gap-5">
+					<section className="sm:w-[400px] w-full">
 						<h3 className="text-2xl my-7">Технические навыки</h3>
-						<div className="w-[400px] h-auto border-4 border-solid rounded-md border-sky-900">
+						<div className="w-full h-auto border-4 border-solid rounded-md border-sky-900">
 							{codingSkillsData.map((item) => (
 								<div
 									key={`${item.name}${item.level}`}
 									className="w-full px-4 py-5"
 								>
-									<h4 className="flex justify-between items-center">
+									<h4 className="flex justify-between items-center text-left">
 										{item.name} <span>{item.level}%</span>
 									</h4>
 									<div className="w-full h-3 border-2  border-solid border-sky-900 rounded-md overflow-hidden">
-										<span
-											className="block h-2 bg-amber-400"
-											style={{ width: `${item.level}%` }}
-										></span>
+										<motion.div
+											className="h-2 bg-amber-400"
+											// style={{ width: `${item.level}%` }}
+											initial={{ width: 0 }}
+											whileInView={{ width: `${item.level}%` }}
+											viewport={{ amount: 0.2, once: true }}
+											transition={{
+												duration: 1,
+												delay: 0.5,
+											}}
+										></motion.div>
 									</div>
 								</div>
 							))}
 						</div>
 					</section>
-					<section className="max-w-xl">
+					<section className="sm:w-[400px] w-full">
 						<h3 className="text-2xl my-7">Дополнительные навыки</h3>
-						<div className="w-[400px] h-auto border-4 border-solid rounded-md border-sky-900">
+						<div className="w-full h-auto border-4 border-solid rounded-md border-sky-900">
 							{profSkillsData.map((item) => (
 								<div
 									key={`${item.name}${item.level}`}
 									className="w-full px-4 py-5"
 								>
-									<h4 className="flex justify-between items-center">
+									<h4 className="flex justify-between items-center text-left">
 										{item.name} <span>{item.level}%</span>
 									</h4>
 									<div className="w-full h-3 border-2  border-solid border-sky-900 rounded-md overflow-hidden">
-										<span
+										<motion.div
 											className="block h-2 bg-amber-400"
-											style={{ width: `${item.level}%` }}
-										></span>
+											// style={{ width: `${item.level}%` }}
+											initial={{ width: 0 }}
+											whileInView={{ width: `${item.level}%` }}
+											viewport={{ amount: 0.2, once: true }}
+											transition={{
+												duration: 1,
+												delay: 0.5,
+											}}
+										></motion.div>
 									</div>
 								</div>
 							))}
