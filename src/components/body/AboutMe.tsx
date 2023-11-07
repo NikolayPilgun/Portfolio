@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { codingSkillsData, profSkillsData } from "../../data/dataAboutMe";
+import Counter from "../counter/Counter";
 export default function AboutMe() {
 	return (
 		<div className="flex-grow mt-10 mb-32">
 			<main className="flex md:flex-row flex-col justify-center items-center gap-5 mx-5">
-				<div className="">
-					<div className="max-w-lg">
+				<div>
+					<div className="max-w-[600px]">
 						<motion.h1
 							className="md:text-5xl text-3xl mb-3"
 							initial={{ opacity: 0, y: -100 }}
@@ -17,27 +18,50 @@ export default function AboutMe() {
 						>
 							Обо мне
 						</motion.h1>
-						<h2 className="md:text-2xl text-xl mb-5">
+						<h2 className="md:text-2xl text-xl mb-4">
 							Меня зовут Николай и я Frontend Разработчик
 						</h2>
-						<p>
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam
-							beatae alias maxime? Sed facere voluptates laborum odio voluptatum
-							natus obcaecati minus, soluta quam delectus asperiores ipsa nemo.
-							Voluptas, quasi dolore.
+						<p className="mb-2">Практический опыт в разработке: 1 год</p>
+
+						<p className="mb-3">
+							Окончил Самарский государственный архитектурно-строительный
+							Университет. Квалификация: инженер по специальности Промышленное и
+							Гражданское строительство.
 						</p>
-						<p className="mt-3">
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam
-							beatae alias maxime? Sed facere voluptates laborum odio voluptatum
-							natus obcaecati minus, soluta quam delectus asperiores ipsa nemo.
-							Voluptas, quasi dolore.
+
+						<p className="mb-3">
+							Долгое время работал по полученной специальности. Участвовал в
+							строительстве крупных нефтегазовых объектов и их инфраструктуре.
+							Благодаря чему получил огромный опыт работы в команде и опыт
+							управления командой. Последнее место работы - начальник отдела
+							подготовки производства.
+						</p>
+
+						<p className="mb-3">
+							Моё знакомство с программированием началось ещё в университете с
+							языка C / C++. Программирование привлекает меня скоростью
+							получения результата, огромным набором вариантов выполнения одной
+							и той же задачи, а также тем, что всегда есть куда развиваться.
+							Немного позже я заинтересовался web-разработкой. Изучил такие
+							языки, как Javascript, HTML и CSS. Web-разработка стала моим
+							хобби.
+						</p>
+
+						<p className="mb-3">
+							С течением времени интерес к программированию только нарастал. Я
+							принял решение превратить своё хобби в свою профессию.
+						</p>
+						<p>Свободное время уделяю спорту, саморазвитию и фотографиям.</p>
+						<p>
+							Готов использовать свои знания и навыки для достижения целей вашей
+							компании.
 						</p>
 					</div>
 				</div>
 				<div className="md:order-1 -order-1">
 					<img
-						className="h-[600px]"
-						src="aboutMe/aboutMePhoto.png"
+						className="min-w-[260px] h-[600px]"
+						src="/aboutMe/aboutMe.png"
 						alt="aboutMePhoto"
 					/>
 				</div>
@@ -54,17 +78,19 @@ export default function AboutMe() {
 									className="w-full px-4 py-5"
 								>
 									<h4 className="flex justify-between items-center text-left">
-										{item.name} <span>{item.level}%</span>
+										{item.name}
+										<span>
+											<Counter value={item.level} />%
+										</span>
 									</h4>
-									<div className="w-full h-3 border-2  border-solid border-sky-900 rounded-md overflow-hidden">
+									<div className="w-full h-3 border-2 border-solid border-sky-900 rounded-md overflow-hidden">
 										<motion.div
 											className="h-2 bg-amber-400"
-											// style={{ width: `${item.level}%` }}
 											initial={{ width: 0 }}
 											whileInView={{ width: `${item.level}%` }}
 											viewport={{ amount: 0.2, once: true }}
 											transition={{
-												duration: 1,
+												duration: 1.3,
 												delay: 0.5,
 											}}
 										></motion.div>
@@ -82,12 +108,14 @@ export default function AboutMe() {
 									className="w-full px-4 py-5"
 								>
 									<h4 className="flex justify-between items-center text-left">
-										{item.name} <span>{item.level}%</span>
+										{item.name}
+										<span>
+											<Counter value={item.level} />%
+										</span>
 									</h4>
-									<div className="w-full h-3 border-2  border-solid border-sky-900 rounded-md overflow-hidden">
+									<div className="w-full h-3 border-2 border-solid border-sky-900 rounded-md overflow-hidden">
 										<motion.div
 											className="block h-2 bg-amber-400"
-											// style={{ width: `${item.level}%` }}
 											initial={{ width: 0 }}
 											whileInView={{ width: `${item.level}%` }}
 											viewport={{ amount: 0.2, once: true }}

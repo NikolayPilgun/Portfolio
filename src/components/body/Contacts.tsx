@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ContactForm from "./ContactForm";
+import ContactForm from "../contactForm/ContactForm";
 
 export default function Contacts() {
 	return (

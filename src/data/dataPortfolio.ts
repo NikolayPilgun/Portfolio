@@ -2,12 +2,11 @@
 import cosmeticsStore1 from "./portfolio/Cosmetics/cosmetics1.png";
 import cosmeticsStore2 from "./portfolio/Cosmetics/cosmetics2.png";
 import cosmeticsStore3 from "./portfolio/Cosmetics/cosmetics3.png";
-// cosmeticsStore
+
 // fitnessClub
 import fitnessClub1 from "./portfolio/Fitness/fitness1.png";
 import fitnessClub2 from "./portfolio/Fitness/fitness2.png";
 import fitnessClub3 from "./portfolio/Fitness/fitness3.png";
-// fitnessClub
 
 // buildingHouse
 import buildingHouse1 from "./portfolio/buildingHouse/buildingHouse1.png";
@@ -17,11 +16,11 @@ import buildingHouse4 from "./portfolio/buildingHouse/buildingHouse4.png";
 import buildingHouse5 from "./portfolio/buildingHouse/buildingHouse5.png";
 import buildingHouse6 from "./portfolio/buildingHouse/buildingHouse6.png";
 import buildingHouse7 from "./portfolio/buildingHouse/buildingHouse7.png";
-// buildingHouse
+
 // carShop
 import carShop1 from "./portfolio/carShop/carShop1.png";
 import carShop2 from "./portfolio/carShop/carShop2.png";
-// carShop
+
 // popularBooks
 import popularBooks3 from "./portfolio/nextProject/nextProject1.png";
 import popularBooks4 from "./portfolio/nextProject/nextProject2.png";
@@ -30,19 +29,17 @@ import popularBooks2 from "./portfolio/nextProject/nextProject4.png";
 import popularBooks5 from "./portfolio/nextProject/nextProject5.png";
 import popularBooks6 from "./portfolio/nextProject/nextProject6.png";
 import popularBooks7 from "./portfolio/nextProject/nextProject7.png";
-// popularBooks
 
 // foodStore
 import foodStore1 from "./portfolio/reactFood/reactFood1.png";
 import foodStore2 from "./portfolio/reactFood/reactFood2.png";
 import foodStore3 from "./portfolio/reactFood/reactFood3.png";
 import foodStore4 from "./portfolio/reactFood/reactFood4.png";
-// foodStore
+
 // pizzeriaStore
 import pizzeriaStore1 from "./portfolio/reactPizza/reactPizza1.png";
 import pizzeriaStore2 from "./portfolio/reactPizza/reactPizza2.png";
 import pizzeriaStore3 from "./portfolio/reactPizza/reactPizza3.png";
-// pizzeriaStore
 
 // clothingStore
 import clothingStore1 from "./portfolio/shopOnePage/shopOnePage1.png";
@@ -50,7 +47,16 @@ import clothingStore2 from "./portfolio/shopOnePage/shopOnePage2.png";
 import clothingStore3 from "./portfolio/shopOnePage/shopOnePage3.png";
 import clothingStore4 from "./portfolio/shopOnePage/shopOnePage4.png";
 import clothingStore5 from "./portfolio/shopOnePage/shopOnePage5.png";
-// clothingStore
+
+// Portfolio
+import portfolio1 from "./portfolio/portfolio/Portfolio1.png";
+import portfolio2 from "./portfolio/portfolio/Portfolio2.png";
+import portfolio3 from "./portfolio/portfolio/Portfolio3.png";
+import portfolio4 from "./portfolio/portfolio/Portfolio4.png";
+import portfolio5 from "./portfolio/portfolio/Portfolio5.png";
+import portfolio6 from "./portfolio/portfolio/Portfolio6.png";
+import portfolio7 from "./portfolio/portfolio/Portfolio7.png";
+
 export interface IFilter {
 	name: string;
 }
@@ -429,6 +435,52 @@ export const siteCardData: ISiteCard[] = [
 			{
 				title: "Примечание",
 				content: "Данный сайт создан на основе YouTube курса",
+			},
+		],
+	},
+	{
+		id: 9,
+		name: "ReactJS",
+		siteType: "Сайт-портфолио",
+		path: "portfolioPage",
+		pictures: [
+			portfolio1,
+			portfolio4,
+			portfolio2,
+			portfolio3,
+			portfolio5,
+			portfolio6,
+			portfolio7,
+		],
+		github: "https://github.com/NikolayPilgun/Portfolio",
+		siteTTX: [
+			{
+				title: "Вид сайта",
+				content: "Сайт-визитка",
+			},
+			{
+				title: "Язык разработки",
+				content: "JavaScript",
+			},
+			{
+				title: "Фреймворк / библиотека",
+				content: "ReactJS",
+			},
+			{
+				title: "Язык стилей",
+				content: "Tailwind CSS",
+			},
+			{
+				title: "Доп. библиотеки",
+				content: "EmailJS, Zod, Framer Motion, React Router DOM v6",
+			},
+			{
+				title: "TypeScript",
+				content: "Да",
+			},
+			{
+				title: "Адаптивный сайт",
+				content: "Да",
 			},
 		],
 	},

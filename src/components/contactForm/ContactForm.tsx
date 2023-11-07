@@ -1,6 +1,6 @@
 import emailjs from "@emailjs/browser";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -29,6 +29,7 @@ const formSchema = z.object({
 type FormSchema = z.infer<typeof formSchema>;
 
 export default function ContactForm() {
+	const [emailSent, setEmailSent] = useState(false);
 	const form = useRef<HTMLFormElement | null>(null);
 	const {
 		register,
@@ -36,6 +37,7 @@ export default function ContactForm() {
 		reset,
 		formState: { isDirty, isSubmitting, errors },
 	} = useForm<FormSchema>({ resolver: zodResolver(formSchema) });
+	console.log(emailSent);
 
 	const sendEmail = () => {
 		emailjs
@@ -53,6 +55,7 @@ export default function ContactForm() {
 					console.log(error.text);
 				}
 			);
+		setEmailSent(true);
 	};
 
 	const onSubmit: SubmitHandler<FormSchema> = () => {
@@ -129,14 +132,17 @@ export default function ContactForm() {
 					className="h-[150px] mb-5 border-0 rounded-lg p-3 outline-none text-lg bg-slate-100 focus:bg-[#FFF8E2] transition-all ease-linear duration-300"
 				/>
 			</div>
-
-			<button
-				className="w-[150px] mx-auto py-3 rounded-xl bg-black text-white cursor-pointer active:scale-95 hover:text-orange-400 transition-all ease-linear duration-300"
-				type="submit"
-				disabled={!isDirty || isSubmitting}
-			>
-				Отправить
-			</button>
+			{emailSent ? (
+				<h3 className="text-lg text-lime-600 text-center">Email отправлен.</h3>
+			) : (
+				<button
+					className="w-[150px] mx-auto py-3 rounded-xl bg-black text-white cursor-pointer active:scale-95 hover:text-orange-400 transition-all ease-linear duration-300"
+					type="submit"
+					disabled={!isDirty || isSubmitting}
+				>
+					Отправить
+				</button>
+			)}
 		</form>
 	);
 }

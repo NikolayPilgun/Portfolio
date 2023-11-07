@@ -40,9 +40,9 @@ export default function Home() {
 								delay: 0.5,
 							}}
 						>
-							Как опытный Frontend разработчик, я стремлюсь превращать идеи в
-							инновационные веб-приложения. Изучите мои последние проекты и
-							статьи, продемонстрируйте свой опыт в React.js и веб-разработке.
+							Как Frontend разработчик, я стремлюсь превращать идеи в
+							инновационные web-приложения. Изучите мои последние проекты, они
+							продемонстрируют мой опыт в React.js и web-разработке.
 						</motion.p>
 						<motion.div
 							className="flex sm:flex-row flex-col sm:justify-start justify-center items-center gap-8 mt-8"
