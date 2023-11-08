@@ -37,7 +37,6 @@ export default function ContactForm() {
 		reset,
 		formState: { isDirty, isSubmitting, errors },
 	} = useForm<FormSchema>({ resolver: zodResolver(formSchema) });
-	console.log(emailSent);
 
 	const sendEmail = () => {
 		emailjs

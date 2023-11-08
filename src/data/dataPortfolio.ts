@@ -1,61 +1,61 @@
 // cosmeticsStore
-import cosmeticsStore1 from "./portfolio/Cosmetics/cosmetics1.png";
-import cosmeticsStore2 from "./portfolio/Cosmetics/cosmetics2.png";
-import cosmeticsStore3 from "./portfolio/Cosmetics/cosmetics3.png";
+import cosmeticsStore1 from "./portfolio/Cosmetics/cosmetics1.svg";
+import cosmeticsStore2 from "./portfolio/Cosmetics/cosmetics2.svg";
+import cosmeticsStore3 from "./portfolio/Cosmetics/cosmetics3.svg";
 
 // fitnessClub
-import fitnessClub1 from "./portfolio/Fitness/fitness1.png";
-import fitnessClub2 from "./portfolio/Fitness/fitness2.png";
-import fitnessClub3 from "./portfolio/Fitness/fitness3.png";
+import fitnessClub1 from "./portfolio/Fitness/fitness1.svg";
+import fitnessClub2 from "./portfolio/Fitness/fitness2.svg";
+import fitnessClub3 from "./portfolio/Fitness/fitness3.svg";
 
 // buildingHouse
-import buildingHouse1 from "./portfolio/buildingHouse/buildingHouse1.png";
-import buildingHouse3 from "./portfolio/buildingHouse/buildingHouse2.png";
-import buildingHouse2 from "./portfolio/buildingHouse/buildingHouse3.png";
-import buildingHouse4 from "./portfolio/buildingHouse/buildingHouse4.png";
-import buildingHouse5 from "./portfolio/buildingHouse/buildingHouse5.png";
-import buildingHouse6 from "./portfolio/buildingHouse/buildingHouse6.png";
-import buildingHouse7 from "./portfolio/buildingHouse/buildingHouse7.png";
+import buildingHouse1 from "./portfolio/buildingHouse/buildingHouse1.svg";
+import buildingHouse3 from "./portfolio/buildingHouse/buildingHouse2.svg";
+import buildingHouse2 from "./portfolio/buildingHouse/buildingHouse3.svg";
+import buildingHouse4 from "./portfolio/buildingHouse/buildingHouse4.svg";
+import buildingHouse5 from "./portfolio/buildingHouse/buildingHouse5.svg";
+import buildingHouse6 from "./portfolio/buildingHouse/buildingHouse6.svg";
+import buildingHouse7 from "./portfolio/buildingHouse/buildingHouse7.svg";
 
 // carShop
-import carShop1 from "./portfolio/carShop/carShop1.png";
-import carShop2 from "./portfolio/carShop/carShop2.png";
+import carShop1 from "./portfolio/carShop/carShop1.svg";
+import carShop2 from "./portfolio/carShop/carShop2.svg";
 
 // popularBooks
-import popularBooks3 from "./portfolio/nextProject/nextProject1.png";
-import popularBooks4 from "./portfolio/nextProject/nextProject2.png";
-import popularBooks1 from "./portfolio/nextProject/nextProject3.png";
-import popularBooks2 from "./portfolio/nextProject/nextProject4.png";
-import popularBooks5 from "./portfolio/nextProject/nextProject5.png";
-import popularBooks6 from "./portfolio/nextProject/nextProject6.png";
-import popularBooks7 from "./portfolio/nextProject/nextProject7.png";
+import popularBooks3 from "./portfolio/nextProject/nextProject1.svg";
+import popularBooks4 from "./portfolio/nextProject/nextProject2.svg";
+import popularBooks1 from "./portfolio/nextProject/nextProject3.svg";
+import popularBooks2 from "./portfolio/nextProject/nextProject4.svg";
+import popularBooks5 from "./portfolio/nextProject/nextProject5.svg";
+import popularBooks6 from "./portfolio/nextProject/nextProject6.svg";
+import popularBooks7 from "./portfolio/nextProject/nextProject7.svg";
 
 // foodStore
-import foodStore1 from "./portfolio/reactFood/reactFood1.png";
-import foodStore2 from "./portfolio/reactFood/reactFood2.png";
-import foodStore3 from "./portfolio/reactFood/reactFood3.png";
-import foodStore4 from "./portfolio/reactFood/reactFood4.png";
+import foodStore1 from "./portfolio/reactFood/reactFood1.svg";
+import foodStore2 from "./portfolio/reactFood/reactFood2.svg";
+import foodStore3 from "./portfolio/reactFood/reactFood3.svg";
+import foodStore4 from "./portfolio/reactFood/reactFood4.svg";
 
 // pizzeriaStore
-import pizzeriaStore1 from "./portfolio/reactPizza/reactPizza1.png";
-import pizzeriaStore2 from "./portfolio/reactPizza/reactPizza2.png";
-import pizzeriaStore3 from "./portfolio/reactPizza/reactPizza3.png";
+import pizzeriaStore1 from "./portfolio/reactPizza/reactPizza1.svg";
+import pizzeriaStore2 from "./portfolio/reactPizza/reactPizza2.svg";
+import pizzeriaStore3 from "./portfolio/reactPizza/reactPizza3.svg";
 
 // clothingStore
-import clothingStore1 from "./portfolio/shopOnePage/shopOnePage1.png";
-import clothingStore2 from "./portfolio/shopOnePage/shopOnePage2.png";
-import clothingStore3 from "./portfolio/shopOnePage/shopOnePage3.png";
-import clothingStore4 from "./portfolio/shopOnePage/shopOnePage4.png";
-import clothingStore5 from "./portfolio/shopOnePage/shopOnePage5.png";
+import clothingStore1 from "./portfolio/shopOnePage/shopOnePage1.svg";
+import clothingStore2 from "./portfolio/shopOnePage/shopOnePage2.svg";
+import clothingStore3 from "./portfolio/shopOnePage/shopOnePage3.svg";
+import clothingStore4 from "./portfolio/shopOnePage/shopOnePage4.svg";
+import clothingStore5 from "./portfolio/shopOnePage/shopOnePage5.svg";
 
 // Portfolio
-import portfolio1 from "./portfolio/portfolio/Portfolio1.png";
-import portfolio2 from "./portfolio/portfolio/Portfolio2.png";
-import portfolio3 from "./portfolio/portfolio/Portfolio3.png";
-import portfolio4 from "./portfolio/portfolio/Portfolio4.png";
-import portfolio5 from "./portfolio/portfolio/Portfolio5.png";
-import portfolio6 from "./portfolio/portfolio/Portfolio6.png";
-import portfolio7 from "./portfolio/portfolio/Portfolio7.png";
+import portfolio1 from "./portfolio/portfolio/Portfolio1.svg";
+import portfolio2 from "./portfolio/portfolio/Portfolio2.svg";
+import portfolio3 from "./portfolio/portfolio/Portfolio3.svg";
+import portfolio4 from "./portfolio/portfolio/Portfolio4.svg";
+import portfolio5 from "./portfolio/portfolio/Portfolio5.svg";
+import portfolio6 from "./portfolio/portfolio/Portfolio6.svg";
+import portfolio7 from "./portfolio/portfolio/Portfolio7.svg";
 
 export interface IFilter {
 	name: string;

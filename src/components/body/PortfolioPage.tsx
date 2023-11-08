@@ -12,7 +12,7 @@ export default function PortfolioPage() {
 				<h1 className="text-3xl sm:my-5 my-10 mx-3 text-center">
 					{dataPageArr.siteType}
 				</h1>
-				<div className="w-[80%]  mx-auto ">
+				<div className="w-[80%] mx-auto">
 					<SliderCarousel dataSlider={dataPageArr.pictures} />
 				</div>
 				<div className="my-8 rounded-lg border-4 cursor-pointer border-black border-solid active:scale-90 transition-all ease-linear duration-300 group">
