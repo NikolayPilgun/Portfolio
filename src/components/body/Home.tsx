@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import Resume from "../../data/portfolio/Resume.pdf";
 
 export default function Home() {
 	return (
@@ -53,21 +54,20 @@ export default function Home() {
 								delay: 1,
 							}}
 						>
-							<Link
+							<a
 								className="flex justify-between items-center gap-4 px-5 py-3 text-lg bg-slate-800 text-white rounded-md active:scale-95 hover:text-[#c4c4c4] transition-all duration-300 group"
-								to="/Resume.pdf"
-								download={true}
-								target="_blank"
+								href={Resume}
+								download
 							>
 								Резюме
 								<span>
 									<img
 										className="w-5 h-5 group-hover:scale-125 transition-all duration-300 "
-										src="/public/logo/logoFile.png"
+										src="/logo/logoFile.png"
 										alt="logoFile"
 									/>
 								</span>
-							</Link>
+							</a>
 							<Link
 								className="relative group py-3 text-lg hover:text-orange-600 transition-all duration-300"
 								to="mailto:03198814@mail.ru"
