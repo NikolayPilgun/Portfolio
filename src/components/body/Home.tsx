@@ -55,7 +55,7 @@ export default function Home() {
 						>
 							<Link
 								className="flex justify-between items-center gap-4 px-5 py-3 text-lg bg-slate-800 text-white rounded-md active:scale-95 hover:text-[#c4c4c4] transition-all duration-300 group"
-								to="/resume.pdf"
+								to="/Resume.pdf"
 								download={true}
 								target="_blank"
 							>
