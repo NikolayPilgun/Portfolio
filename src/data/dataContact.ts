@@ -7,24 +7,24 @@ export interface ISocialData {
 export const socialData: ISocialData[] = [
 	{
 		linkTo: "mailto:03198814@mail.ru",
-		imgSrc: "contacts/e-mail.png",
+		imgSrc: "pictures/e-mail.png",
 		imgAlt: "e-mail",
 	},
 	{
 		linkTo: "https://github.com/NikolayPilgun",
-		imgSrc: "contacts/github.png",
+		imgSrc: "pictures/github.png",
 		imgAlt: "github",
 	},
 	{
 		linkTo: "https://t.me/NikolayPilgun",
-		imgSrc: "contacts/telegram.png",
+		imgSrc: "pictures/telegram.png",
 		imgAlt: "telegram",
 		spanTitle: "@NikolayPilgun",
 	},
 	{
-		linkTo: "https://vk.com/id830020894",
-		imgSrc: "contacts/vk.png",
+		linkTo: "https://vk.com/nikolaypilgun",
+		imgSrc: "pictures/vk.png",
 		imgAlt: "vk",
-		spanTitle: "id830020894",
+		spanTitle: "nikolaypilgun",
 	},
 ];

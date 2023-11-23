@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import {
 	default as leftArrow,
 	default as rightArrow,
-} from "../../data/portfolio/icons/arrow4.png";
+} from "../../data/dataImg/icons/arrow4.png";
 import styles from "./slider.module.css";
 
 export default function SliderCarousel({

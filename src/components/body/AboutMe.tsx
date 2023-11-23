@@ -36,7 +36,7 @@ export default function AboutMe() {
 				<div className="md:order-1 -order-1">
 					<img
 						className="min-w-[260px] h-[600px]"
-						src="/aboutMe/aboutMe.png"
+						src="/pictures/aboutMe.png"
 						alt="aboutMePhoto"
 					/>
 				</div>

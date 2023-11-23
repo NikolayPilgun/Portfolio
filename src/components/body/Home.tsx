@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import Resume from "../../data/portfolio/Resume.pdf";
+import Resume from "../../data/Resume.pdf";
 
 export default function Home() {
 	return (
 		<div className="flex-grow mt-10 xl:mb-1 mb-10">
 			<main className="flex xl:flex-row flex-col flex-wrap justify-between items-center">
 				<div className="xl:flex-[0_1_50%] w-full h-auto">
-					<img src="/home/hero1.svg" alt="hero" />
+					<img src="/pictures/hero1.svg" alt="hero" />
 				</div>
 				<div className="xl:flex-[0_1_50%] w-full h-auto">
 					<div className="ml-10 mr-6 mt-8 xl:mt-1">
@@ -63,7 +63,7 @@ export default function Home() {
 								<span>
 									<img
 										className="w-5 h-5 group-hover:scale-125 transition-all duration-300 "
-										src="/logo/logoFile.png"
+										src="/pictures/logoFile.png"
 										alt="logoFile"
 									/>
 								</span>
