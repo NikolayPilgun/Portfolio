@@ -15,7 +15,7 @@ export default function PortfolioPage() {
 				<div className="w-[80%]  mx-auto">
 					<SliderCarousel dataSlider={dataPageArr.pictures} />
 				</div>
-				<div className="my-8 rounded-lg border-4 cursor-pointer border-black border-solid active:scale-90 transition-all ease-linear duration-300 group">
+				<div className="my-8 cursor-pointer rounded-lg border-4  border-black border-solid active:scale-90 transition-all ease-linear duration-300 group">
 					<a
 						className="flex items-center gap-3 px-4 py-2"
 						href={dataPageArr.github}

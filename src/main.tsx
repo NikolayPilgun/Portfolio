@@ -7,12 +7,14 @@ import Contacts from "./components/body/Contacts.tsx";
 import Home from "./components/body/Home.tsx";
 import Portfolio from "./components/body/Portfolio.tsx";
 import PortfolioPage from "./components/body/PortfolioPage.tsx";
+import ErrorPage from "./components/errorPage/ErrorPage.tsx";
 import "./index.css";
 
 const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <App />,
+		errorElement: <ErrorPage />,
 		children: [
 			{
 				path: "/",

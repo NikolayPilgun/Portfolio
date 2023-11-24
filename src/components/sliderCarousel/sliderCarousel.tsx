@@ -68,7 +68,11 @@ export default function SliderCarousel({
 				>
 					{items.map((item, index) => (
 						<div key={index} className={styles.item}>
-							<img src={item} alt={`Pictures${index}`} />
+							<img
+								className={styles.itemImg}
+								src={item}
+								alt={`Pictures${index}`}
+							/>
 						</div>
 					))}
 				</div>
