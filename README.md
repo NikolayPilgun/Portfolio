@@ -1,27 +1,41 @@
-# React + TypeScript + Vite
+[![Header](https://github.com/NikolayPilgun/Portfolio/blob/main/src/data/dataImg/portfolio/Portfolio1.svg)](https://nikolaypilgun.ru/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Вид сайта — Сайт-визитка. Тема — Сайт-портфолио.
 
-Currently, two official plugins are available:
+## Данный проект является моим [сайтом-портфолио](https://nikolaypilgun.ru/).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Полностью разработан и реализован [NikolayPilgun](https://github.com/NikolayPilgun).
 
-## Expanding the ESLint configuration
+## Технологии:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [React](https://ru.legacy.reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Zod](https://zod.dev/)
 
-- Configure the top-level `parserOptions` property like this:
+Для установки и запуска проекта, необходим:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+- [NodeJS](https://nodejs.org/)
+
+### Установка зависимостей.
+
+Для установки зависимостей выполните команду.
+
+```sh
+npm i
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Запуск Development сервера.
+
+Чтобы запустить сервер для разработки, выполните команду.
+
+```sh
+npm run dev
+```
+
+## Дополнительная информация
+
+Выбор технологии и инструментов для реализации данного проекта может быть не самым оптимальным.
+Данный выбор служит для отработки навыков, используемых технологий и инструментов.
