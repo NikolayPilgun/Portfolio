@@ -142,7 +142,7 @@ export const siteCardData: ISiteCard[] = [
 		siteTTX: [
 			{
 				title: "Вид сайта",
-				content: "Корпоративный имиджевый web-сайт",
+				content: "Корпоративный web-сайт",
 			},
 			{
 				title: "Язык разработки",
@@ -238,7 +238,7 @@ export const siteCardData: ISiteCard[] = [
 		siteTTX: [
 			{
 				title: "Вид сайта",
-				content: "Корпоративный имиджевый web-сайт",
+				content: "Корпоративный web-сайт",
 			},
 			{
 				title: "Язык разработки",
@@ -263,10 +263,6 @@ export const siteCardData: ISiteCard[] = [
 			{
 				title: "Адаптивный сайт",
 				content: "Да",
-			},
-			{
-				title: "Примечание",
-				content: "Для работы сайта необходимо использовать JSON Server",
 			},
 		],
 	},

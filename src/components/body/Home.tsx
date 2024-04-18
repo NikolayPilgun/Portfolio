@@ -20,7 +20,7 @@ export default function Home() {
 								delay: 0.5,
 							}}
 						>
-							Привет, я Николай Пильгун
+							Привет, я Николай Пильгун.
 						</motion.h1>
 						<motion.h2
 							className="md:text-2xl text-xl mb-5"
@@ -34,6 +34,7 @@ export default function Home() {
 							Frontend Разработчик
 						</motion.h2>
 						<motion.p
+							className="text-lg"
 							initial={{ opacity: 0, scale: 0.5 }}
 							animate={{ opacity: 1, scale: 1 }}
 							transition={{
@@ -41,9 +42,9 @@ export default function Home() {
 								delay: 0.5,
 							}}
 						>
-							Как Frontend разработчик, я стремлюсь превращать идеи в
-							инновационные web-приложения. Изучите мои последние проекты, они
-							продемонстрируют мой опыт в React.js и web-разработке.
+							Как Frontend-разработчик, я стремлюсь воплощать идеи в
+							инновационные веб-приложения. Ознакомьтесь с моими последними
+							проектами, они продемонстрируют мой опыт в веб-разработке.
 						</motion.p>
 						<motion.div
 							className="flex sm:flex-row flex-col sm:justify-start justify-center items-center gap-8 mt-8"

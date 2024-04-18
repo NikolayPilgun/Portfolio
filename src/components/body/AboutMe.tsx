@@ -23,11 +23,13 @@ export default function AboutMe() {
 						>
 							Обо мне
 						</motion.h1>
-						<h2 className="md:text-2xl text-xl mb-4">
-							Меня зовут Николай и я Frontend Разработчик
+						<h2 className="md:text-2xl text-xl mb-2">
+							Меня зовут Николай, и я Frontend-разработчик. Мой практический
+							опыт в разработке составляет более двух лет.
 						</h2>
+
 						{aboutMeData.map((item, index) => (
-							<p key={index} className="mb-3">
+							<p key={index} className="mb-3 text-base">
 								{item}
 							</p>
 						))}
