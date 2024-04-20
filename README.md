@@ -1,6 +1,6 @@
 [![Header](https://github.com/NikolayPilgun/Portfolio/blob/main/src/data/dataImg/portfolio/Portfolio1.svg)](https://nikolaypilgun.ru/)
 
-# Вид сайта — Сайт-визитка. Тема — Сайт-портфолио.
+# Тип сайта — Сайт-визитка. Тема — Сайт-портфолио.
 
 ## Данный проект является моим [сайтом-портфолио](https://nikolaypilgun.ru/).
 
