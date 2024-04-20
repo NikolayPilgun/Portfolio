@@ -14,7 +14,7 @@ export const codingSkillsData: ISkills[] = [
 	},
 	{
 		name: "JavaScript",
-		level: 70,
+		level: 75,
 	},
 	{
 		name: "TypeScript",
@@ -52,8 +52,8 @@ export const profSkillsData: ISkills[] = [
 		level: 40,
 	},
 	{
-		name: "Affinity Photo / Designer",
-		level: 40,
+		name: "Redux Toolkit",
+		level: 50,
 	},
 	{
 		name: "NodeJS",
@@ -61,7 +61,7 @@ export const profSkillsData: ISkills[] = [
 	},
 	{
 		name: "Webpack",
-		level: 60,
+		level: 50,
 	},
 ];
 

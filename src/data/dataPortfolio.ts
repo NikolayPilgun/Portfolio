@@ -56,6 +56,13 @@ import portfolio4 from "./dataImg/portfolio/Portfolio4.svg";
 import portfolio5 from "./dataImg/portfolio/Portfolio5.svg";
 import portfolio6 from "./dataImg/portfolio/Portfolio6.svg";
 import portfolio7 from "./dataImg/portfolio/Portfolio7.svg";
+// metalStructures
+import metalStructures1 from "./dataImg/metalStructures/1MetalStructures.svg";
+import metalStructures2 from "./dataImg/metalStructures/2MetalStructures.svg";
+import metalStructures3 from "./dataImg/metalStructures/3MetalStructures.svg";
+import metalStructures4 from "./dataImg/metalStructures/4MetalStructures.svg";
+import metalStructures5 from "./dataImg/metalStructures/5MetalStructures.svg";
+import metalStructures6 from "./dataImg/metalStructures/6MetalStructures.svg";
 
 export interface IFilter {
 	name: string;
@@ -97,7 +104,7 @@ export const siteCardData: ISiteCard[] = [
 		github: "https://github.com/NikolayPilgun/car-shop",
 		siteTTX: [
 			{
-				title: "Вид сайта",
+				title: "Тип сайта",
 				content: "Сайт-визитка",
 			},
 			{
@@ -141,7 +148,7 @@ export const siteCardData: ISiteCard[] = [
 		github: "https://github.com/NikolayPilgun/shop-one-page",
 		siteTTX: [
 			{
-				title: "Вид сайта",
+				title: "Тип сайта",
 				content: "Корпоративный web-сайт",
 			},
 			{
@@ -187,7 +194,7 @@ export const siteCardData: ISiteCard[] = [
 		github: "https://github.com/NikolayPilgun/next-13-project",
 		siteTTX: [
 			{
-				title: "Вид сайта",
+				title: "Тип сайта",
 				content: "Информационный сайт / Блог",
 			},
 			{
@@ -237,7 +244,7 @@ export const siteCardData: ISiteCard[] = [
 		github: "https://github.com/NikolayPilgun/BuildingHouse",
 		siteTTX: [
 			{
-				title: "Вид сайта",
+				title: "Тип сайта",
 				content: "Корпоративный web-сайт",
 			},
 			{
@@ -275,7 +282,7 @@ export const siteCardData: ISiteCard[] = [
 		github: "https://github.com/NikolayPilgun/ReactPizza",
 		siteTTX: [
 			{
-				title: "Вид сайта",
+				title: "Тип сайта",
 				content: "Интернет-магазин",
 			},
 			{
@@ -317,7 +324,7 @@ export const siteCardData: ISiteCard[] = [
 		github: "https://github.com/NikolayPilgun/ReactCosmetics",
 		siteTTX: [
 			{
-				title: "Вид сайта",
+				title: "Тип сайта",
 				content: "Сайт-визитка",
 			},
 			{
@@ -359,7 +366,7 @@ export const siteCardData: ISiteCard[] = [
 		github: "https://github.com/NikolayPilgun/FitnessClub",
 		siteTTX: [
 			{
-				title: "Вид сайта",
+				title: "Тип сайта",
 				content: "Сайт-визитка",
 			},
 			{
@@ -401,7 +408,7 @@ export const siteCardData: ISiteCard[] = [
 		github: "https://github.com/NikolayPilgun/ReactFood",
 		siteTTX: [
 			{
-				title: "Вид сайта",
+				title: "Тип сайта",
 				content: "Интернет-магазин",
 			},
 			{
@@ -451,7 +458,7 @@ export const siteCardData: ISiteCard[] = [
 		github: "https://github.com/NikolayPilgun/Portfolio",
 		siteTTX: [
 			{
-				title: "Вид сайта",
+				title: "Тип сайта",
 				content: "Сайт-визитка",
 			},
 			{
@@ -477,6 +484,55 @@ export const siteCardData: ISiteCard[] = [
 			{
 				title: "Адаптивный сайт",
 				content: "Да",
+			},
+		],
+	},
+	{
+		id: 10,
+		name: "ReactJS",
+		siteType: "Монтаж металлоконструкций",
+		path: "metalStructures",
+		pictures: [
+			metalStructures1,
+			metalStructures2,
+			metalStructures3,
+			metalStructures4,
+			metalStructures5,
+			metalStructures6,
+		],
+		github: "https://github.com/NikolayPilgun/MetalStructures",
+		siteTTX: [
+			{
+				title: "Тип сайта",
+				content: "Сайт-визитка",
+			},
+			{
+				title: "Язык разработки",
+				content: "JavaScript",
+			},
+			{
+				title: "Фреймворк / библиотека",
+				content: "ReactJS",
+			},
+			{
+				title: "Язык стилей",
+				content: "Tailwind CSS",
+			},
+			{
+				title: "Доп. библиотеки",
+				content: "В данный момент не используется.",
+			},
+			{
+				title: "TypeScript",
+				content: "Да",
+			},
+			{
+				title: "Адаптивный сайт",
+				content: "Нет",
+			},
+			{
+				title: "Примечание",
+				content: "Для работы сайта необходимо использовать JSON Server",
 			},
 		],
 	},
