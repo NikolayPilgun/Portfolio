@@ -8,11 +8,11 @@ import MySkills from "./MySkills";
 
 export default function AboutMe() {
 	return (
-		<div className="flex-grow mt-10 mb-32">
-			<main className="flex md:flex-row flex-col justify-center items-center gap-5 mx-5">
+		<main className="flex-grow mt-10 mb-32">
+			<article className="flex md:flex-row flex-col justify-center items-center gap-5 mx-5">
 				<div>
 					<div className="max-w-[600px]">
-						<motion.h1
+						<motion.h2
 							className="md:text-5xl text-3xl mb-3"
 							initial={{ opacity: 0, y: -100 }}
 							animate={{ opacity: 1, y: 0 }}
@@ -22,11 +22,11 @@ export default function AboutMe() {
 							}}
 						>
 							Обо мне
-						</motion.h1>
-						<h2 className="md:text-2xl text-xl mb-2">
+						</motion.h2>
+						<h3 className="md:text-2xl text-xl mb-4">
 							Меня зовут Николай, и я Frontend-разработчик. Мой практический
 							опыт в разработке составляет более двух лет.
-						</h2>
+						</h3>
 
 						{aboutMeData.map((item, index) => (
 							<p key={index} className="mb-3 text-base">
@@ -42,9 +42,9 @@ export default function AboutMe() {
 						alt="aboutMePhoto"
 					/>
 				</div>
-			</main>
+			</article>
 			<div className="my-10 mx-10 text-center">
-				<h2 className="text-5xl font-medium my-7">Мои навыки</h2>
+				<h3 className="text-5xl font-medium my-7">Мои навыки</h3>
 				<div className="flex flex-wrap justify-around items-start gap-5">
 					<MySkills
 						skillsData={codingSkillsData}
@@ -56,6 +56,6 @@ export default function AboutMe() {
 					/>
 				</div>
 			</div>
-		</div>
+		</main>
 	);
 }

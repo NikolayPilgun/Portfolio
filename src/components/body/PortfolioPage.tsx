@@ -7,11 +7,11 @@ export default function PortfolioPage() {
 	const dataPageArr = siteCardData.filter((item) => item.path === dataPage)[0];
 
 	return (
-		<div className="flex-grow mt-10 mb-20">
+		<article className="flex-grow mt-10 mb-20">
 			<div className="flex flex-col justify-center items-center">
-				<h1 className="text-3xl sm:my-5 my-10 mx-3 text-center">
+				<h2 className="text-3xl sm:my-5 my-10 mx-3 text-center">
 					{dataPageArr.siteType}
-				</h1>
+				</h2>
 				<div className="w-[80%]  mx-auto">
 					<SliderCarousel dataSlider={dataPageArr.pictures} />
 				</div>
@@ -37,7 +37,7 @@ export default function PortfolioPage() {
 				</div>
 
 				<div className="w-full mb-10">
-					<h2 className="text-2xl ml-[10%] mb-5">Краткое описание</h2>
+					<h3 className="text-2xl ml-[10%] mb-5">Краткое описание</h3>
 					<div className="flex flex-col justify-center items-center gap-6 ml-[12%] mr-[10%] sm:w-[530px] ">
 						{dataPageArr.siteTTX.map((item, index) => (
 							<p
@@ -51,6 +51,6 @@ export default function PortfolioPage() {
 					</div>
 				</div>
 			</div>
-		</div>
+		</article>
 	);
 }

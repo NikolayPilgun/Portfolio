@@ -79,6 +79,7 @@ export const filterData: IFilter[] = [
 		name: "ReactJS",
 	},
 ];
+
 export interface ISiteTTX {
 	title: string;
 	content: string;

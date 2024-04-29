@@ -10,7 +10,7 @@ export default function MySkills({
 	title: string;
 }) {
 	return (
-		<section className="sm:w-[400px] w-full">
+		<article className="sm:w-[400px] w-full">
 			<h3 className="text-2xl my-7">{title}</h3>
 			<div className="w-full h-auto border-4 border-solid rounded-md border-sky-900">
 				{skillsData.map((item) => (
@@ -36,6 +36,6 @@ export default function MySkills({
 					</div>
 				))}
 			</div>
-		</section>
+		</article>
 	);
 }

@@ -35,7 +35,7 @@ export default function ContactForm() {
 		register,
 		handleSubmit,
 		reset,
-		formState: { isDirty, isSubmitting, errors },
+		formState: { errors },
 	} = useForm<FormSchema>({ resolver: zodResolver(formSchema) });
 
 	const sendEmail = () => {
@@ -134,13 +134,11 @@ export default function ContactForm() {
 			{emailSent ? (
 				<h3 className="text-lg text-lime-600 text-center">Email отправлен.</h3>
 			) : (
-				<button
+				<input
 					className="w-[150px] mx-auto py-3 rounded-xl bg-black text-white cursor-pointer active:scale-95 hover:text-orange-400 transition-all ease-linear duration-300"
 					type="submit"
-					disabled={!isDirty || isSubmitting}
-				>
-					Отправить
-				</button>
+					value="Отправить"
+				/>
 			)}
 		</form>
 	);

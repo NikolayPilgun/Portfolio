@@ -4,13 +4,13 @@ import Resume from "../../data/Resume.pdf";
 
 export default function Home() {
 	return (
-		<div className="flex-grow mt-10 xl:mb-1 mb-10">
-			<main className="flex xl:flex-row flex-col flex-wrap justify-between items-center">
+		<main className="flex-grow mt-10 xl:mb-1 mb-10">
+			<div className="flex xl:flex-row flex-col flex-wrap justify-between items-center">
 				<div className="xl:flex-[0_1_50%] w-full h-auto">
 					<img src="/pictures/hero1.svg" alt="hero" />
 				</div>
 				<div className="xl:flex-[0_1_50%] w-full h-auto">
-					<div className="ml-10 mr-6 mt-8 xl:mt-1">
+					<article className="ml-10 mr-6 mt-8 xl:mt-1">
 						<motion.h1
 							className="md:text-5xl text-3xl mb-3"
 							initial={{ opacity: 0, y: -100 }}
@@ -34,7 +34,7 @@ export default function Home() {
 							Frontend Разработчик
 						</motion.h2>
 						<motion.p
-							className="text-lg"
+							className="text-lg max-w-[800px]"
 							initial={{ opacity: 0, scale: 0.5 }}
 							animate={{ opacity: 1, scale: 1 }}
 							transition={{
@@ -70,20 +70,20 @@ export default function Home() {
 								</span>
 							</a>
 							<Link
-								className="relative group py-3 text-lg hover:text-orange-600 transition-all duration-300"
+								className="relative group  text-lg hover:text-orange-600 transition-all duration-300"
 								to="mailto:03198814@mail.ru"
 							>
 								Связаться со мной
-								<span className="absolute h-[2px] left-0 bottom-1 w-full inline-block text-center">
+								<span className="absolute h-[2px] left-0 -bottom-2 w-full inline-block text-center">
 									<span className="inline-block w-0 h-[2px] transition-[width] ease-linear duration-300 group-hover:w-[90%]  bg-slate-900 ">
 										&nbsp;
 									</span>
 								</span>
 							</Link>
 						</motion.div>
-					</div>
+					</article>
 				</div>
-			</main>
-		</div>
+			</div>
+		</main>
 	);
 }
