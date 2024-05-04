@@ -16,10 +16,12 @@ body {
 	);
 	font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
+
 .active {
 	color: #1f28d5;
 	transition: all 0.5s;
 }
+
 .active > span > span {
 	width: 90%;
 }

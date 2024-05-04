@@ -6,11 +6,11 @@ export default function Home() {
 	return (
 		<main className="flex-grow mt-10 xl:mb-1 mb-10">
 			<div className="flex xl:flex-row flex-col flex-wrap justify-between items-center">
-				<div className="xl:flex-[0_1_50%] w-full h-auto">
+				<aside className="xl:w-1/2 w-full h-auto">
 					<img src="/pictures/hero1.svg" alt="hero" />
-				</div>
-				<div className="xl:flex-[0_1_50%] w-full h-auto">
-					<article className="ml-10 mr-6 mt-8 xl:mt-1">
+				</aside>
+				<section className="xl:w-1/2 w-full h-auto">
+					<article className="mx-10 mt-8 xl:mt-1">
 						<motion.h1
 							className="md:text-5xl text-3xl mb-3"
 							initial={{ opacity: 0, y: -100 }}
@@ -42,9 +42,9 @@ export default function Home() {
 								delay: 0.5,
 							}}
 						>
-							Как Frontend-разработчик, я стремлюсь воплощать идеи в
-							инновационные веб-приложения. Ознакомьтесь с моими последними
-							проектами, они продемонстрируют мой опыт в веб-разработке.
+							Как frontend-разработчик, я стремлюсь воплощать идеи в
+							инновационные веб-приложения. Познакомьтесь с моими последними
+							проектами, они наглядно демонстрируют мой опыт в веб-разработке.
 						</motion.p>
 						<motion.div
 							className="flex sm:flex-row flex-col sm:justify-start justify-center items-center gap-8 mt-8"
@@ -63,7 +63,7 @@ export default function Home() {
 								Резюме
 								<span>
 									<img
-										className="w-5 h-5 group-hover:scale-125 transition-all duration-300 "
+										className="w-5 h-5 group-hover:scale-125 transition-all duration-300"
 										src="/pictures/logoFile.png"
 										alt="logoFile"
 									/>
@@ -82,7 +82,7 @@ export default function Home() {
 							</Link>
 						</motion.div>
 					</article>
-				</div>
+				</section>
 			</div>
 		</main>
 	);

@@ -10,6 +10,7 @@ import PortfolioPage from "./components/body/PortfolioPage.tsx";
 import ErrorPage from "./components/errorPage/ErrorPage.tsx";
 import "./index.css";
 
+// Определение маршрутов
 const router = createBrowserRouter([
 	{
 		path: "/",
@@ -40,6 +41,7 @@ const router = createBrowserRouter([
 	},
 ]);
 
+// Рендеринг приложения
 ReactDOM.createRoot(document.getElementById("root")!).render(
 	<React.StrictMode>
 		<RouterProvider router={router} />

@@ -4,6 +4,7 @@ export interface ISocialData {
 	imgAlt: string;
 	spanTitle?: string;
 }
+
 export const socialData: ISocialData[] = [
 	{
 		linkTo: "mailto:03198814@mail.ru",
