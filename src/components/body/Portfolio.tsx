@@ -1,18 +1,18 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import { Link } from "react-router-dom";
-import { filterData, siteCardData } from "../../data/dataPortfolio";
+import { ISiteCard, filterData, siteCardData } from "../../data/dataPortfolio";
 
-export default function Portfolio() {
-	const [count, setCount] = useState(0);
-	const [siteCard, setSiteCard] = useState(siteCardData);
+const Portfolio: FC = () => {
+	const [count, setCount] = useState<number>(0);
+	const [siteCard, setSiteCard] = useState<ISiteCard[]>(siteCardData);
 
 	function filterOnClick(index: number, name: string) {
 		setCount(index);
-		if (name === "Все работы") {
-			setSiteCard(siteCardData);
-		} else {
-			setSiteCard(siteCardData.filter((item) => item.name === name));
-		}
+		setSiteCard(
+			name === "Все работы"
+				? siteCardData
+				: siteCardData.filter((item) => item.name === name)
+		);
 	}
 
 	return (
@@ -32,7 +32,8 @@ export default function Portfolio() {
 					))}
 				</ul>
 			</div>
-			<div className="flex flex-wrap justify-around items-center gap-10 mx-5">
+
+			<section className="flex flex-wrap justify-around items-center gap-10 mx-5">
 				{siteCard.map((item) => (
 					<article
 						key={item.id}
@@ -56,6 +57,7 @@ export default function Portfolio() {
 							<h4 className="text-xl font-normal text-center">
 								Сайт разработан на {item.name}
 							</h4>
+
 							<Link
 								className="px-4 py-3 bg-slate-950 bg-opacity-100 hover:scale-110 transition-all ease-linear duration-300 rounded-md text-white"
 								to={`/${item.path}`}
@@ -65,7 +67,9 @@ export default function Portfolio() {
 						</div>
 					</article>
 				))}
-			</div>
+			</section>
 		</main>
 	);
-}
+};
+
+export default Portfolio;

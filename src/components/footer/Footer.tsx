@@ -1,4 +1,6 @@
-export default function Footer() {
+import { FC } from "react";
+
+const Footer: FC = () => {
 	return (
 		<footer className="flex sm:flex-row flex-col justify-between items-center gap-5 px-8 py-5 text-slate-200">
 			<div>
@@ -10,9 +12,10 @@ export default function Footer() {
 					/>
 				</a>
 			</div>
-			<h2 className="text-lg text-center">
+			<h4 className="text-lg text-center">
 				&copy; {new Date().getFullYear()} Николай Пильгун
-			</h2>
+			</h4>
 		</footer>
 	);
-}
+};
+export default Footer;

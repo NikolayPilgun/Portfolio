@@ -1,8 +1,11 @@
 import emailjs from "@emailjs/browser";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useRef, useState } from "react";
+import { FC, useRef, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
+import InputField from "./InputField";
+
+type FormSchema = z.infer<typeof formSchema>;
 
 const formSchema = z.object({
 	name: z
@@ -26,35 +29,47 @@ const formSchema = z.object({
 		.max(300, { message: "Сообщение слишком длинное" }),
 });
 
-type FormSchema = z.infer<typeof formSchema>;
-
-export default function ContactForm() {
+const ContactForm: FC = () => {
 	const [emailSent, setEmailSent] = useState(false);
-	const form = useRef<HTMLFormElement | null>(null);
+	const [loading, setLoading] = useState(false);
+	const [errorMessage, setErrorMessage] = useState<string | null>(null);
 	const {
 		register,
 		handleSubmit,
 		reset,
 		formState: { errors },
 	} = useForm<FormSchema>({ resolver: zodResolver(formSchema) });
+	const formRef = useRef<HTMLFormElement>(null);
 
-	const sendEmail = () => {
-		emailjs
-			.sendForm(
+	const sendEmail = async () => {
+		try {
+			setLoading(true);
+			if (!formRef.current) {
+				console.error("Form reference is not available.");
+				return;
+			}
+
+			const response = await emailjs.sendForm(
 				import.meta.env.VITE_SERVICE_ID,
 				import.meta.env.VITE_TEMPLATE_ID,
-				form.current ? form.current : "",
+				formRef.current,
 				import.meta.env.VITE_PUBLIC_KEY
-			)
-			.then(
-				(result) => {
-					console.log(result.text);
-				},
-				(error) => {
-					console.log(error.text);
-				}
 			);
-		setEmailSent(true);
+
+			if (response.status === 200) {
+				setEmailSent(true);
+				setErrorMessage(null);
+			} else {
+				setErrorMessage(
+					"При отправке письма произошла ошибка. Попробуйте еще раз."
+				);
+			}
+		} catch (error) {
+			setErrorMessage("Ошибка при отправке письма. Попробуйте еще раз.");
+			console.error("Error sending email:", error);
+		} finally {
+			setLoading(false);
+		}
 	};
 
 	const onSubmit: SubmitHandler<FormSchema> = () => {
@@ -65,64 +80,37 @@ export default function ContactForm() {
 	return (
 		<form
 			className="sm:w-[450px] w-full flex flex-col"
-			ref={form}
+			ref={formRef}
 			onSubmit={handleSubmit(onSubmit)}
 		>
-			<div className="flex flex-col">
-				{errors.name ? (
-					<span role="alert" className="text-lg text-red-500">
-						{errors.name?.message}
-					</span>
-				) : (
-					<label htmlFor="name" className="text-lg">
-						Ваше имя
-					</label>
-				)}
+			{errorMessage && (
+				<div className="text-lg text-red-500 text-center mb-5">
+					{errorMessage}
+				</div>
+			)}
 
-				<input
-					{...register("name")}
-					type="text"
-					id="name"
-					name="name"
-					placeholder="Ваше имя"
-					aria-invalid={errors.name ? "true" : "false"}
-					className="mb-5 border-0 rounded-lg p-3 outline-none text-lg bg-slate-100 focus:bg-[#FFF8E2] transition-all ease-linear duration-300"
-				/>
-			</div>
+			<InputField
+				label="Ваше имя"
+				name="name"
+				errors={errors}
+				register={register}
+			/>
+			<InputField
+				label="Ваш Email"
+				name="email"
+				errors={errors}
+				register={register}
+			/>
 
-			<div className="flex flex-col">
-				{errors.email ? (
-					<span role="alert" className="text-lg text-red-500">
-						{errors.email?.message}
-					</span>
-				) : (
-					<label htmlFor="email" className="text-lg">
-						Ваш Email
-					</label>
-				)}
-
-				<input
-					{...register("email")}
-					type="text"
-					id="email"
-					name="email"
-					placeholder="example@mail.com"
-					aria-invalid={errors.email ? "true" : "false"}
-					className="mb-5 border-0 rounded-lg p-3 outline-none text-lg bg-slate-100 focus:bg-[#FFF8E2] transition-all ease-linear duration-300"
-				/>
-			</div>
-
-			<div className="flex flex-col">
-				{errors.yourMessage ? (
-					<span role="alert" className="text-lg text-red-500">
-						{errors.yourMessage?.message}
-					</span>
-				) : (
-					<label htmlFor="yourMessage" className="text-lg">
-						Ваше сообщение
-					</label>
-				)}
-
+			<label htmlFor="yourMessage" className="text-lg flex flex-col">
+				<span>
+					Ваше сообщение
+					{errors.yourMessage && (
+						<span className="ml-4 text-lg text-red-500">
+							{errors.yourMessage?.message}
+						</span>
+					)}
+				</span>
 				<textarea
 					{...register("yourMessage")}
 					id="yourMessage"
@@ -130,16 +118,28 @@ export default function ContactForm() {
 					aria-invalid={errors.yourMessage ? "true" : "false"}
 					className="h-[150px] mb-5 border-0 rounded-lg p-3 outline-none text-lg bg-slate-100 focus:bg-[#FFF8E2] transition-all ease-linear duration-300"
 				/>
+			</label>
+
+			<div className="h-12 text-center">
+				{loading ? (
+					<div className="flex flex-col items-center justify-center my-4">
+						<div className="inline-block animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-orange-400"></div>
+						<div className="mt-2 text-lg text-gray-600">Отправка...</div>
+					</div>
+				) : emailSent ? (
+					<h3 className="text-lg text-lime-600 text-center">
+						Email отправлен.
+					</h3>
+				) : (
+					<input
+						type="submit"
+						className="w-[150px] mx-auto py-3 rounded-xl bg-black text-white cursor-pointer active:scale-95 hover:text-orange-400 transition-all ease-linear duration-300"
+						value="Отправить"
+					/>
+				)}
 			</div>
-			{emailSent ? (
-				<h3 className="text-lg text-lime-600 text-center">Email отправлен.</h3>
-			) : (
-				<input
-					className="w-[150px] mx-auto py-3 rounded-xl bg-black text-white cursor-pointer active:scale-95 hover:text-orange-400 transition-all ease-linear duration-300"
-					type="submit"
-					value="Отправить"
-				/>
-			)}
 		</form>
 	);
-}
+};
+
+export default ContactForm;

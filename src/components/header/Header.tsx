@@ -1,7 +1,7 @@
+import { FC } from "react";
 import CubeLogo from "../cubeLogo/CubeLogo";
 import NavBar from "./NavBar";
-
-export default function Header() {
+const Header: FC = () => {
 	return (
 		<header className="w-full flex justify-between items-center gap-5 px-10 py-7">
 			<NavBar />
@@ -10,4 +10,5 @@ export default function Header() {
 			</div>
 		</header>
 	);
-}
+};
+export default Header;

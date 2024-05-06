@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
+import { FC } from "react";
 import { Link } from "react-router-dom";
 import Resume from "../../data/Resume.pdf";
 
-export default function Home() {
+const Home: FC = () => {
 	return (
 		<main className="flex-grow mt-10 xl:mb-1 mb-10">
-			<div className="flex xl:flex-row flex-col flex-wrap justify-between items-center">
+			<div className="flex xl:flex-row flex-col flex-wrap justify-between items-center overflow-hidden">
 				<aside className="xl:w-1/2 w-full h-auto">
 					<img src="/pictures/hero1.svg" alt="hero" />
 				</aside>
@@ -86,4 +87,6 @@ export default function Home() {
 			</div>
 		</main>
 	);
-}
+};
+
+export default Home;

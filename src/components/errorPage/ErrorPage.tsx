@@ -1,5 +1,7 @@
+import { FC } from "react";
 import { NavLink, isRouteErrorResponse, useRouteError } from "react-router-dom";
-export default function ErrorPage() {
+
+const ErrorPage: FC = () => {
 	const error = useRouteError();
 	let errorMessage: string;
 
@@ -34,4 +36,5 @@ export default function ErrorPage() {
 			</div>
 		</div>
 	);
-}
+};
+export default ErrorPage;

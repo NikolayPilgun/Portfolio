@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import {
 	default as leftArrow,
 	default as rightArrow,
 } from "../../data/dataImg/icons/arrow4.png";
 import styles from "./slider.module.css";
 
-export default function SliderCarousel({
-	dataSlider,
-}: {
+interface SliderCarouselProps {
 	dataSlider: string[];
-}) {
+}
+
+const SliderCarousel: FC<SliderCarouselProps> = ({ dataSlider }) => {
 	const items = [
 		dataSlider[dataSlider.length - 1],
 		...dataSlider,
@@ -85,4 +85,5 @@ export default function SliderCarousel({
 			</div>
 		</div>
 	);
-}
+};
+export default SliderCarousel;

@@ -1,7 +1,11 @@
 import { useInView, useMotionValue, useSpring } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { FC, useEffect, useRef } from "react";
 
-export default function Counter({ value }: { value: number }) {
+interface CounterProps {
+	value: number;
+}
+
+const Counter: FC<CounterProps> = ({ value }) => {
 	const ref = useRef<HTMLSpanElement>(null);
 	const motionValue = useMotionValue(0);
 	const springValue = useSpring(motionValue, {
@@ -33,4 +37,5 @@ export default function Counter({ value }: { value: number }) {
 	);
 
 	return <span ref={ref} />;
-}
+};
+export default Counter;

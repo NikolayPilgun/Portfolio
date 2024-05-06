@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
+import { FC } from "react";
 import { ISkills } from "../../data/dataAboutMe";
 import Counter from "../counter/Counter";
 
-export default function MySkills({
-	skillsData,
-	title,
-}: {
+interface MySkillsProps {
 	skillsData: ISkills[];
 	title: string;
-}) {
+}
+
+const MySkills: FC<MySkillsProps> = ({ skillsData, title }) => {
 	return (
 		<article className="sm:w-96 w-full bg-gray-100 p-4 rounded-lg shadow-md">
 			<h3 className="sm:text-2xl text-xl my-4 text-center">{title}</h3>
@@ -36,4 +36,6 @@ export default function MySkills({
 			</div>
 		</article>
 	);
-}
+};
+
+export default MySkills;

@@ -1,14 +1,15 @@
+import { FC } from "react";
 import { useParams } from "react-router-dom";
 import { siteCardData } from "../../data/dataPortfolio";
 import SliderCarousel from "../sliderCarousel/sliderCarousel";
 
-export default function PortfolioPage() {
-	const dataPage = useParams().pageId;
-	const dataPageArr = siteCardData.filter((item) => item.path === dataPage)[0];
+const PortfolioPage: FC = () => {
+	const { pageId } = useParams();
+	const [dataPageArr] = siteCardData.filter((item) => item.path === pageId);
 
 	return (
 		<article className="flex-grow mt-10 mb-20">
-			<div className="flex flex-col justify-center items-center">
+			<section className="flex flex-col justify-center items-center">
 				<h2 className="text-3xl sm:my-5 my-10 mx-3 text-center">
 					{dataPageArr.siteType}
 				</h2>
@@ -39,9 +40,9 @@ export default function PortfolioPage() {
 				<div className="w-full mb-10">
 					<h3 className="text-2xl ml-[10%] mb-5">Краткое описание</h3>
 					<div className="flex flex-col justify-center items-center gap-6 ml-[12%] mr-[10%] sm:w-[530px] ">
-						{dataPageArr.siteTTX.map((item, index) => (
+						{dataPageArr.siteTTX.map((item) => (
 							<p
-								key={index}
+								key={item.title}
 								className="w-full flex justify-between gap-5 text-lg border-b-4 border-[#A68C42]"
 							>
 								<span className="text-left">{item.title}:</span>
@@ -50,7 +51,8 @@ export default function PortfolioPage() {
 						))}
 					</div>
 				</div>
-			</div>
+			</section>
 		</article>
 	);
-}
+};
+export default PortfolioPage;

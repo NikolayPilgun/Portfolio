@@ -1,7 +1,8 @@
+import { FC } from "react";
 import styles from "./cubeLogo.module.css";
-export default function CubeLogo() {
+const CubeLogo: FC = () => {
 	return (
-		<div className={styles.container}>
+		<div className={`${styles.container} max-md:scale-75 max-md:-top-3`}>
 			<div className={styles.box}>
 				<div className={styles.card}>JavaScript</div>
 				<div className={styles.card}>Next.js</div>
@@ -16,4 +17,6 @@ export default function CubeLogo() {
 			</div>
 		</div>
 	);
-}
+};
+
+export default CubeLogo;
